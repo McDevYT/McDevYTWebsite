@@ -11,9 +11,10 @@ html {
 .element::-webkit-scrollbar { width: 0 !important }
 
 body {
-    background: #151D21;
+    background: #000e27;
     background-image: url('../images/bg.png');
-    background-size: 100%;
+    background-size: cover; /* Ensures the background covers the entire element without showing empty space */
+    background-position: center; /* Keeps the image centered even when resized */
     background-repeat: no-repeat;
     color: white;
 }

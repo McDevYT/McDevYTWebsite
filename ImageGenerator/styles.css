@@ -44,7 +44,7 @@
     margin-top: 20px;
     text-align: center;
     font-family: 'Roboto';
-    color: rgb(230, 90, 90);
+    color: rgb(148, 45, 45);
 }
 
 .grid {
@@ -57,7 +57,7 @@
     max-width: 800px; /* Limit the width of the grid */
     margin: 20px auto; /* Center grid horizontally */
     padding: 20px;
-    background-color: #4d4d4d; /* Light gray background */
+    background-color: #4b49964d; /* Light gray background */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for grid */
     border-radius: 15px; /* Rounded corners */
     min-height: 400px; /* Pre-assign space for 4 images */
