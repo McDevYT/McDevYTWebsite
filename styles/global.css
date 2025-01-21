@@ -29,33 +29,37 @@ a:hover {
 
 header .logo a {
 	background-image: url("../images/logo.png");
-	background-size: 90px;
+	background-size: 50px;
 	background-repeat: no-repeat;
 	display: inline-block;
-	height: 100px;
-	width: 111px;
+	height: 50px;
+	width: 50px;
 	text-indent: -999999px;
+    border-radius: 4px;
 	position: relative;
-    top: -15px;
 }
 
 li:first-child {
     float: left; 
 }
 
-li {
-    display: inline-block;
-    padding-right: 7%;
-    margin: 10px 0 0 0;
-    font-size: 36px;
-}
 
 .topnav {
     list-style: none;
     font-family: 'Roboto Thin';
     color: aliceblue;
-    margin: 50px 0 0 0;
+    margin: -10px; /* Remove external spacing */
+    padding: 20px; /* Remove internal spacing */
     text-align: right;
+    background-color: #00000041; /* Add your desired background */
+}
+
+li {
+    margin: 0 10px 0 30px; /* Remove margin around list items */
+    padding: 0 10px; /* Optional: Add padding inside list items */
+    display: inline-block;
+    
+    font-size: 36px;
 }
 
 section header {

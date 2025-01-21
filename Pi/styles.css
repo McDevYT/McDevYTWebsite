@@ -22,16 +22,6 @@ body {
     text-align: center;
     overflow: hidden;
 }
-
-#typed-digits {
-    color: green;
-}
-
-#current-digit {
-    color: red;
-    font-weight: bold;
-}
-
 #remaining-digits {
     color: gray;
 }
@@ -64,12 +54,12 @@ button:hover {
 }
 
 .typed-digit {
-    color: green;
+    color: rgba(13, 255, 13, 0.89);
     font-weight: bold;
 }
 
 .active-digit {
-    color: red;
+    color: rgb(255, 66, 9);
     font-size: 60px; /* Slightly larger for emphasis */
     font-weight: bold;
     text-decoration: underline;
