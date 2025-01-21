@@ -18,33 +18,41 @@
                 <ul class="topnav">
                     <li class="logo"><a href="index"></a></li>
                     <li><a href="../index.html">HOME</a></li>
-                    <li><a href="ImageGenerator/index.html">IMAGE GENERATOR</a></li>
-                    <li><a href="pages/videos">VIDEOS</a></li>
-                    <li><a href="pages/contact">CONTACT</a></li>
+                    <li><a href="../ImageGenerator/index.html">IMAGE GENERATOR</a></li>
+                    <li><a href="../Pi/index.html">Pi</a></li>
                 </ul>
             </nav>
         </header>
 
   
 
-    <div class="container">
-        <div class="header">
-            <h1>Image Generator</h1>
+        <div class="container">
+            <div class="header">
+                <h1>Image Generator</h1>
+            </div>
+        
+            <div class="input-container">
+                <input type="text" id="prompt" placeholder="Enter your prompt...">
+                <button id="generate">Generate</button>
+            </div>
+        
+            <div id="message" class="message"></div>
+        
+            <!-- Grid for pre-assigned image placeholders -->
+            <div class="grid" id="image-grid">
+                <div><img src="" alt="" style="visibility: hidden;"></div>
+                <div><img src="" alt="" style="visibility: hidden;"></div>
+                <div><img src="" alt="" style="visibility: hidden;"></div>
+                <div><img src="" alt="" style="visibility: hidden;"></div>
+            </div>
+        
+            <!-- Note below the grid -->
+            <div class="note">Note: this is not a real image generator</div>
         </div>
-
-        <div class="input-container">
-            <input type="text" id="prompt" placeholder="Enter your prompt...">
-            <button id="generate">Generate</button>
-        </div>
-
-        <div id="message" class="message"></div>
-
-        <div class="grid" id="image-grid">
-            <!-- Images will be inserted here -->
-        </div>
-    </div>
 
     
+
+
     <footer>&copy; 2025 McDevYT</footer>
 
 </body>

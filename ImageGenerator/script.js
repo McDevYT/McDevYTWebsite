@@ -27,7 +27,7 @@ document.getElementById('generate').addEventListener('click', function() {
     gridElement.innerHTML = ''; // Clear images
 
     if (!prompt) {
-        messageElement.innerHTML = 'Please enter a prompt first. Or just type "funny" for a surprise!';
+        messageElement.innerHTML = 'Please enter a prompt first!';
         return;
     }
 
