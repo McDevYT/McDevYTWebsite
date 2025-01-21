@@ -1,12 +1,3 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .container {
     padding-top: 100px; /* Adjusted to leave space for the fixed input bar */
@@ -15,15 +6,15 @@ body {
 
 .header {
     margin-bottom: 20px;
+    
+    font-family: 'Roboto';
 }
 
 .input-container {
-    position: fixed; /* Fixed the input bar at the top */
     top: 0;
     left: 0;
     right: 0;
     padding: 20px; /* Increased padding for bigger input field */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
     z-index: 1000; /* Ensure it is on top of other elements */
     text-align: center; /* Centering the content inside the input bar */
 }
@@ -58,13 +49,11 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Fixed 2x2 grid */
-    gap: 20px; /* Gap between images */
-    margin-top: 20px;
     justify-items: center; /* Centering grid items horizontally */
     align-items: center; /* Centering grid items vertically */
     width: 100%;
     max-width: 800px; /* Limit the width of the grid */
-    height: 100vh; /* Ensure it occupies full viewport height */
+    height: 70vh; /* Ensure it occupies full viewport height */
 }
 
 .grid img {
