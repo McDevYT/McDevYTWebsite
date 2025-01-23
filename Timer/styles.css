@@ -1,0 +1,28 @@
+
+input[type="datetime-local"], button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #61dafb;
+    color: #000;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+.timer {
+    font-size: 4em;
+    margin-top: 30px;
+    color: #61dafb;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+}

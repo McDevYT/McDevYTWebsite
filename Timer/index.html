@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pi Typing Challenge</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown Timer</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="styles.css">
-    <script type="module" src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -22,21 +22,16 @@
         </nav>
     </header>
 
-    <div class="container">
-        <h1>Pi Typing Challenge</h1>
-        <h4>Type the digits of Pi! The timer starts when you type, and stops if you make a mistake.</h4>
-        <div id="timer">Time: 0.000s</div>
-        <div id="pi-display">
-            <span id="typed-digits"></span>
-            <span id="current-digit"></span>
-            <span id="remaining-digits"></span>
-        </div>
-        <div id="controls">
-            <button id="restart-btn">Restart</button>
-            <p>Yes, I know 200 of these. So try to beat me hehe.</p>
-        </div>
-    </div>
+    <section>
+        <header>
+            <h6>Countdown Timer</h6>
+            <div class="timer">00:00:00</div>
+            <input type="datetime-local" id="datetime">
+            <button id="start">Start Countdown</button>
+        </header>
+    </section>
 
     <footer>&copy; 2025 McDevYT</footer>
+    <script src="script.js"></script>
 </body>
 </html>
