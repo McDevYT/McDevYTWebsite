@@ -13,7 +13,6 @@ html {
 .element::-webkit-scrollbar { width: 0 !important }
 
 body {
-    background-color: ;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
