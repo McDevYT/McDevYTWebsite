@@ -2,6 +2,8 @@
 
 html {
     scroll-behavior: smooth;
+    background: linear-gradient(to top right, #000e27,#000e27, #444444), #000e27;
+    background-repeat: no-repeat;
 }
 
 ::-webkit-scrollbar {
@@ -11,12 +13,11 @@ html {
 .element::-webkit-scrollbar { width: 0 !important }
 
 body {
-    background: #000e27;
-    background-image: url('../images/bg.png');
-    background-size: cover; /* Ensures the background covers the entire element without showing empty space */
-    background-position: center; /* Keeps the image centered even when resized */
+    background-color: ;
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
-    color: white;
+    color: aliceblue;
 }
 
 a {
