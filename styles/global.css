@@ -20,6 +20,7 @@ body {
 }
 
 a {
+    font-family: 'Roboto';
     text-decoration: none;
     color: aliceblue;
 }
@@ -47,12 +48,16 @@ li:first-child {
 
 .topnav {
     list-style: none;
-    font-family: 'Roboto Thin';
+    font-family: 'Roboto';
     color: aliceblue;
     margin: -10px; /* Remove external spacing */
     padding: 20px; /* Remove internal spacing */
     text-align: right;
     background-color: #00000041; /* Add your desired background */
+    -webkit-user-select: none; /* For Safari and Chrome */
+    -moz-user-select: none;    /* For Firefox */
+    -ms-user-select: none;     /* For Internet Explorer/Edge */
+    user-select: none;  
 }
 
 li {
