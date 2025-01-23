@@ -99,3 +99,10 @@ document.getElementById('submit-name').addEventListener('click', submitUsername)
 
 // Fetch usernames on page load
 fetchUserNames();
+
+// Event listener for the "Enter" key in the input field
+document.getElementById('Username').addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+        submitUsername();
+    }
+});
