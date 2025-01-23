@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Roboto';
     background: linear-gradient(to top right, #000e27,#000e27, #444444), #000e27;
     background-repeat: no-repeat;
 }
