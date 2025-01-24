@@ -2,7 +2,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 
 // Initialize Supabase client
 const supabaseUrl = 'https://jnrwwtmmxfpzqocvwcjk.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impucnd3dG1teGZwenFvY3Z3Y2prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc2MzUwOTMsImV4cCI6MjA1MzIxMTA5M30.bmAk383bGToVZAtuznwdKnEkAfLIGqyGOv_uSIBeWE4'; // Replace with your actual Supabase anon key
+const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impucnd3dG1teGZwenFvY3Z3Y2prIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzc2MzUwOTMsImV4cCI6MjA1MzIxMTA5M30.bmAk383bGToVZAtuznwdKnEkAfLIGqyGOv_uSIBeWE4';
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Generate a random color for custom roles
@@ -57,12 +57,13 @@ async function submitUsername() {
     const username = usernameInput.value.trim();
     const errorMessage = document.getElementById('error-message');
     const userIp = await getUserIp();
+    const userFingerprint = await getFingerprint();
 
     // Clear previous error messages
     errorMessage.textContent = '';
 
-    if (!userIp) {
-        errorMessage.textContent = 'Unable to fetch your IP address. Please try again.';
+    if (!userIp || !userFingerprint) {
+        errorMessage.textContent = 'Unable to fetch your device information. Please try again.';
         return;
     }
 
@@ -70,11 +71,11 @@ async function submitUsername() {
         const { data: existingUser, error: fetchError } = await supabase
             .from('Visitors')
             .select('*')
-            .eq('Ip', userIp)
+            .or(`Ip.eq.${userIp},Fingerprint.eq.${userFingerprint}`)
             .single();
 
         if (fetchError && fetchError.code !== 'PGRST116') {
-            console.error('Error checking IP:', fetchError);
+            console.error('Error checking device:', fetchError);
             return;
         }
 
@@ -83,7 +84,9 @@ async function submitUsername() {
             return;
         }
 
-        const { error } = await supabase.from('Visitors').insert([{ Username: username, Ip: userIp }]);
+        const { error } = await supabase.from('Visitors').insert([
+            { Username: username, Ip: userIp, Fingerprint: userFingerprint },
+        ]);
 
         if (error) {
             console.error('Error inserting username:', error);
@@ -104,6 +107,18 @@ async function getUserIp() {
         return data.ip; // Returns the user's IP address
     } catch (error) {
         console.error('Error fetching IP address:', error);
+        return null;
+    }
+}
+
+// Function to get the user's fingerprint
+async function getFingerprint() {
+    try {
+        const fp = await FingerprintJS.load();
+        const result = await fp.get();
+        return result.visitorId; // Returns the unique fingerprint
+    } catch (error) {
+        console.error('Error fetching fingerprint:', error);
         return null;
     }
 }
