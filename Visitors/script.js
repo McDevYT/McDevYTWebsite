@@ -51,18 +51,16 @@ async function fetchUserNames() {
     });
 }
 
-// Function to submit a new username
 async function submitUsername() {
     const usernameInput = document.getElementById('Username');
     const username = usernameInput.value.trim();
     const errorMessage = document.getElementById('error-message');
-    const userIp = await getUserIp();
     const userFingerprint = await getFingerprint();
 
     // Clear previous error messages
     errorMessage.textContent = '';
 
-    if (!userIp || !userFingerprint) {
+    if (!userFingerprint) {
         errorMessage.textContent = 'Unable to fetch your device information. Please try again.';
         return;
     }
@@ -71,10 +69,8 @@ async function submitUsername() {
         const { data: existingUser, error: fetchError } = await supabase
             .from('Visitors')
             .select('*')
-            .eq('Ip', userIp)  // Check if IP matches
-            .eq('Fingerprint', userFingerprint)  // Check if Fingerprint matches
+            .eq('Fingerprint', userFingerprint)  // Check only Fingerprint
             .single();
-
 
         if (fetchError && fetchError.code !== 'PGRST116') {
             console.error('Error checking device:', fetchError);
@@ -87,7 +83,7 @@ async function submitUsername() {
         }
 
         const { error } = await supabase.from('Visitors').insert([
-            { Username: username, Ip: userIp, Fingerprint: userFingerprint },
+            { Username: username, Fingerprint: userFingerprint },
         ]);
 
         if (error) {
