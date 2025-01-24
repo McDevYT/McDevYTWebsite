@@ -1,0 +1,148 @@
+.container {
+    padding-top: 100px; 
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+}
+
+.input-container {
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px; 
+    z-index: 1000; 
+    text-align: center; 
+}
+
+.input-container input {
+    width: 70%; 
+    padding: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    font-size: 18px; 
+}
+
+.input-container button {
+    padding: 15px 25px; 
+    border: none; 
+    background-color: #007bff; 
+    color: white; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-size: 18px; 
+}
+
+.input-container button:hover {
+    background-color: #0056b3; 
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.user-list {
+    font-family: 'Roboto';
+    margin: 50px auto;
+    text-align: left;
+    width: 80%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.user-item {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.disclaimer-text {
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+    text-align: center;
+}
+.chat-box {
+    width: 80%;
+    height: 500px;
+    margin: 0 auto 20px auto;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: transparent; /* Transparent background */
+    box-shadow: none; /* Remove box shadow */
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to message boxes */
+}
+
+.own-message {
+    background-color: #007bff;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.other-message {
+    background-color: #f1f1f1;
+    color: black;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.login-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.popup-content {
+    text-align: center;
+}
+
+.popup-content h2 {
+    margin-bottom: 10px;
+}
+
+.popup-content input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.popup-content button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.popup-content button:hover {
+    background-color: #0056b3;
+}
