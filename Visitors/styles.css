@@ -61,3 +61,10 @@
     font-size: 18px;
     margin: 10px 0;
 }
+
+.disclaimer-text {
+    font-size: 0.8em;
+    color: gray;
+    margin-top: 5px;
+    text-align: center;
+}

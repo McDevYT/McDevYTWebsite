@@ -71,8 +71,10 @@ async function submitUsername() {
         const { data: existingUser, error: fetchError } = await supabase
             .from('Visitors')
             .select('*')
-            .or(`Ip.eq.${userIp},Fingerprint.eq.${userFingerprint}`)
+            .eq('Ip', userIp)  // Check if IP matches
+            .eq('Fingerprint', userFingerprint)  // Check if Fingerprint matches
             .single();
+
 
         if (fetchError && fetchError.code !== 'PGRST116') {
             console.error('Error checking device:', fetchError);
