@@ -1,37 +1,68 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    
+/* Prevent horizontal scrolling on mobile */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
+/* Ensure container doesn't exceed screen width */
 .container {
-    margin-top: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 80px; /* Adjusted to avoid overlap with navbar */
     padding: 20px;
+    text-align: center; /* Center the text inside container */
 }
 
-#timer {
-    font-size: 24px;
+/* Title and header styles */
+h1, h4 {
     margin-bottom: 20px;
+    padding-top: 10px; /* Optional: Adjust spacing between title and top of container */
+    text-align: center; /* Center the text */
+}
+
+/* Timer and Pi display styles */
+#timer {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center; /* Center the timer */
 }
 
 #pi-display {
-    font-size: 20px;
-    letter-spacing: 1px;
-    margin: 20px auto;
-    width: 80%;
-    text-align: center;
-    overflow: hidden;
-}
-#remaining-digits {
-    color: gray;
-}
-
-#controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 30px;
     margin-top: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    user-select: none; /* Disable text selection */
 }
 
+/* Pi digits color */
+.typed-digit {
+    color: rgba(13, 255, 13, 0.89);
+    font-weight: bold;
+}
+
+.active-digit {
+    color: rgb(255, 66, 9);
+    font-size: 48px; /* Slightly larger for emphasis */
+    font-weight: bold;
+    position: relative;
+    top: -10px; /* Lift the active digit higher */
+}
+
+.hidden-digit {
+    color: gray;
+    opacity: 0.3;
+}
+
+/* Button styles */
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -43,29 +74,49 @@ button:hover {
     background-color: #0056b3;
 }
 
-#pi-display {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 48px;
-    white-space: nowrap;
-    overflow: hidden;
-    display: inline-block;
-    transform: translateX(0); /* Start centered */
-    transition: transform 0.3s ease-in-out;
+/* Numpad container */
+#numpad-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 320px;  /* Prevent scaling beyond a certain width */
+    width: 100%;
+    margin: 0 auto;
 }
 
-.typed-digit {
-    color: rgba(13, 255, 13, 0.89);
-    font-weight: bold;
+/* Numpad button */
+.numpad-btn {
+    font-size: 24px;
+    padding: 20px;
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.active-digit {
-    color: rgb(255, 66, 9);
-    font-size: 60px; /* Slightly larger for emphasis */
-    font-weight: bold;
-    text-decoration: underline;
+.numpad-btn:hover {
+    background-color: #0056b3;
 }
 
-.hidden-digit {
+/* Double width for 0 button */
+.double-width {
+    width: 120px; /* Double the width of the other buttons */
+}
+
+/* Numpad row (reverse order) */
+.numpad-row {
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
     color: gray;
-    opacity: 0.3;
 }

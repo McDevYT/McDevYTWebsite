@@ -17,7 +17,7 @@
 
     <div class="container">
         <h1>Pi Typing Challenge</h1>
-        <h4>Type the digits of Pi! The timer starts when you type, and stops if you make a mistake.</h4>
+        <h4>Type the digits of Pi!</h4>
         <div id="timer">Time: 0.000s</div>
         <div id="pi-display">
             <span id="typed-digits"></span>
@@ -27,6 +27,28 @@
         <div id="controls">
             <button id="restart-btn">Restart</button>
             <p>Yes, I know 200 of these. So try to beat me hehe.</p>
+        </div>
+    </div>
+
+    <!-- Add the numpad under the challenge -->
+    <div id="numpad-container">
+        <div class="numpad-row">
+            <button class="numpad-btn" id="btn-7">7</button>
+            <button class="numpad-btn" id="btn-8">8</button>
+            <button class="numpad-btn" id="btn-9">9</button>
+        </div>
+        <div class="numpad-row">
+            <button class="numpad-btn" id="btn-4">4</button>
+            <button class="numpad-btn" id="btn-5">5</button>
+            <button class="numpad-btn" id="btn-6">6</button>
+        </div>
+        <div class="numpad-row">
+            <button class="numpad-btn" id="btn-1">1</button>
+            <button class="numpad-btn" id="btn-2">2</button>
+            <button class="numpad-btn" id="btn-3">3</button>
+        </div>
+        <div class="numpad-row">
+            <button class="numpad-btn double-width" id="btn-0">0</button>
         </div>
     </div>
 
