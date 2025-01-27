@@ -1,7 +1,5 @@
 /* Prevent horizontal scrolling on mobile */
 body, html {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden; /* Disable horizontal scrolling */
 }
 
