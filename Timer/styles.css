@@ -1,3 +1,20 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 100px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
 
 input[type="datetime-local"], button {
     padding: 10px;
@@ -16,13 +33,60 @@ button:hover {
     background-color: #21a1f1;
 }
 
+
 .timer {
-    font-size: 4em;
+    font-size: 4em;  /* Original desktop size */
     margin-top: 30px;
     color: #61dafb;
+    white-space: nowrap; /* Ensure the timer doesn't break into multiple lines */
 }
 
-.container {
-    margin-top: 50px;
-    padding: 20px;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .timer {
+        font-size: 1.8em;  /* Smaller size for mobile (less than 768px) */
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 100%; /* Make input field and button fit screen width */
+        max-width: none;
+    }
+
+    .input-container input[type="datetime-local"] {
+        font-size: 14px; /* Slightly smaller font size on mobile */
+        padding: 10px; /* Smaller padding */
+    }
+
+    .input-container button {
+        font-size: 16px; /* Smaller font size for the button */
+    }
+}
+
+@media (max-width: 480px) {
+    .timer {
+        font-size: 1.2em;  /* Even smaller timer size on very small screens */
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 95%; /* Ensure buttons/input fields take almost full width */
+    }
+
+    .grid {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .grid img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* For screens between 700px and 1048px */
+@media (min-width: 700px) and (max-width: 1048px) {
+    .timer {
+        font-size: 2.5em;  /* Adjust timer size for mid-range screens */
+    }
 }
