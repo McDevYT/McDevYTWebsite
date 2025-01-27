@@ -21,6 +21,7 @@
     text-align: center;
     width: 100%;
 }
+
 .input-container input {
     width: 100%;
     max-width: 500px;
@@ -28,28 +29,27 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 18px;
-    margin-bottom: 10px; /* Add some space between input and button */
-    box-sizing: border-box; /* Ensure padding and border are within width */
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .input-container button {
-    width: 100%;
-    max-width: 300px; /* Make the button slightly smaller than the input */
-    padding: 15px 25px; /* Larger button padding */
+    width: auto;
+    max-width: 200px; /* Less wide button */
+    padding: 15px 25px;
     border: none;
     background-color: #007bff;
     color: white;
     border-radius: 8px;
     cursor: pointer;
     font-size: 18px;
-    margin-top: 10px; /* Add space between the button and the input */
+    margin-top: 10px;
     box-sizing: border-box;
 }
 
 .input-container button:hover {
     background-color: #0056b3;
 }
-
 
 .message {
     margin-top: 20px;
@@ -78,18 +78,18 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .grid {
-        grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
+        grid-template-columns: 1fr;
         padding: 20px;
     }
 
     .input-container input,
     .input-container button {
-        width: 100%; /* Make input field and button fit screen width */
+        width: 100%;
         max-width: none;
     }
 
     .grid img {
-        width: 100%; /* Make sure images are responsive */
+        width: 100%;
         height: auto;
     }
 }
