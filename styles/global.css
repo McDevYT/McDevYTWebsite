@@ -71,7 +71,7 @@ li {
 
 section header {
     margin-top: 0px;
-    font-family: 'Roboto Thin';
+    font-family: 'Roboto';
     font-size: 62px;
     margin-bottom: 20px;
 }
@@ -90,7 +90,7 @@ section {
 }
 
 section nav {
-    font-family: 'Roboto Thin';
+    font-family: 'Roboto';
     font-size: 36px;
     line-height: 55px;
     text-align: left;
@@ -162,7 +162,7 @@ section .mybutton:hover {
 }
 
 footer {
-    font-family: 'Roboto Thin';
+    font-family: 'Roboto';
     text-align: center;
     background-attachment: scroll;
     background-position: 0% 0%;
@@ -172,7 +172,7 @@ footer {
 
 @media screen and (max-width: 1140px) {
     section nav {
-        font-family: 'Roboto Thin';
+        font-family: 'Roboto';
         font-size: 24px;
         line-height: 36px;
         text-align: left;
