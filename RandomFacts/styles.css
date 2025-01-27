@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding-top: 100px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.input-container {
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    min-height: 300px; /* Ensure the container has enough space */
+}
+
+.input-container button {
+    width: auto;
+    max-width: 200px;
+    padding: 15px 25px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    top: 20px; /* Move the button to the top */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-container button:hover {
+    background-color: #0056b3;
+}
+
+.fact-text {
+    font-size: 1.5rem; /* Slightly smaller than the title */
+    font-weight: normal; /* Different from the title */
+    margin-bottom: 30px;
+    color: aliceblue; /* Set the color to aliceblue */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6; /* Makes the fact text more readable */
+    padding-top: 80px; /* Add space to the top so the text doesn't overlap the button */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 100%;
+        max-width: none;
+    }
+
+    .grid img {
+        width: 100%;
+        height: auto;
+    }
+}
