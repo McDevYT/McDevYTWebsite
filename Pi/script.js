@@ -118,7 +118,7 @@ function handleKeyPress(event) {
         }
     } else {
         stopTimer();
-        displayMessage(`Mistake at digit ${currentIndex + 1}. Press Enter to restart.`, true);
+        displayMessage(`Mistake at digit ${currentIndex - 1}. Press Enter to restart.`, true);
         gameOver = true;
     }
 }
