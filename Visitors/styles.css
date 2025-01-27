@@ -23,6 +23,7 @@
     border: 1px solid #ccc; 
     border-radius: 8px; 
     font-size: 18px; 
+    word-wrap: break-word; /* Ensures the name wraps onto the next line */
 }
 
 .input-container button {
@@ -60,6 +61,7 @@
 .user-item {
     font-size: 18px;
     margin: 10px 0;
+    word-wrap: break-word; /* Ensures the name wraps onto the next line */
 }
 
 .disclaimer-text {
@@ -68,3 +70,4 @@
     margin-top: 5px;
     text-align: center;
 }
+    

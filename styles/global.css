@@ -18,6 +18,7 @@ body {
     background-position: center; 
     background-repeat: no-repeat;
     color: aliceblue;
+    padding-top: 60px; 
 }
 
 a {
@@ -51,22 +52,31 @@ li:first-child {
     list-style: none;
     font-family: 'Roboto';
     color: aliceblue;
-    margin: -10px; /* Remove external spacing */
-    padding: 20px; /* Remove internal spacing */
-    text-align: right;
-    background-color: #00000041; /* Add your desired background */
+    margin: 0; /* Removed external spacing */
+    padding: 10px 0; /* Adjust internal spacing */
+    text-align: left;
+    background-color: #00000041; /* Desired background */
     -webkit-user-select: none; /* For Safari and Chrome */
     -moz-user-select: none;    /* For Firefox */
     -ms-user-select: none;     /* For Internet Explorer/Edge */
     user-select: none;  
+    position: fixed; /* Make navbar fixed */
+    top: 0; /* Position it at the top */
+    width: 100%; /* Ensure it spans across the full width */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Ensure proper spacing between items */
+    align-items: center;
+    flex-wrap: wrap; /* Allow text to wrap if needed */
+    overflow: auto; /* Ensure navbar stays within the screen */
+    white-space: nowrap; /* Prevent text from wrapping */
 }
 
 li {
-    margin: 0 10px 0 30px; /* Remove margin around list items */
-    padding: 0 10px; /* Optional: Add padding inside list items */
-    display: inline-block;
-    
+    margin: 0 10px; /* Adjust margin */
+    padding: 10px; /* Optional: Adjust padding */
     font-size: 36px;
+    display: inline-block;
 }
 
 section header {
@@ -171,95 +181,50 @@ footer {
 }
 
 @media screen and (max-width: 1140px) {
-    section nav {
-        font-family: 'Roboto';
-        font-size: 24px;
-        line-height: 36px;
-        text-align: left;
-        display: inline-flex;
-        flex-direction: column;
-        align-items: center;
+    .topnav {
+        font-size: 26px; /* Slightly larger font size */
+        padding: 5px; /* Reduced padding */
     }
 
     li {
-        font-size: 24px;
+        font-size: 22px; /* Slightly larger text */
+        padding: 0 5px; /* Adjust padding */
     }
 
-    .features {
+    .topnav {
         display: flex;
-        flex-direction: row;
-        position: relative;
-        top: -40px;
-    }
-
-    .features figure img {
-        border-radius: 50%;
-        width: 200px;
-        height: 200px;
-    }    
-
-    figure figcaption {
-        font-family: 'Roboto Black';
-        font-size: 24px;
-        margin-top: 10px;
-        margin-bottom: 100px;
+        justify-content: space-between; /* Distribute items */
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 8px; /* Reduced gap between items */
     }
 }
 
 @media screen and (max-width: 760px) {
-    .features {
-        display: block;
+    .topnav {
+        font-size: 18px; /* Slightly larger font size */
+        flex-wrap: wrap; /* Ensure wrapping */
+        gap: 6px; /* Smaller gap */
     }
 
     li {
-        font-size: 14px;
+        font-size: 16px; /* Larger text for mobile */
+        padding: 0 4px; /* Reduce padding */
     }
 
-    section header {
-        font-size: 42px;
+    .topnav {
+        justify-content: space-around; /* Adjust alignment */
     }
-
-    .games {
-        margin-top: 50px;
-    }
-
-    .features figure:first-child {
-        padding-top: 100px;
-    }
-
-    section nav {
-        font-size: 16px;
-        line-height: 36px;
-    }
-
-    footer {
-        font-size: 10px;
-    }
-    header .logo a {
-        height: 50px;
-	    width: 60px;
-        background-size: 50px;
-    }
-
 }
 
 @media screen and (max-width: 600px) {
+    .topnav {
+        font-size: 16px; /* Slightly larger font size */
+        flex-wrap: wrap;
+        gap: 4px; /* Even smaller gap */
+    }
+
     li {
-        font-size: 12px;
-    }
-
-    section nav {
-        font-size: 14px;
-        line-height: 26px;
-    }
-
-    section .mybutton {
-        font-size: 12px;
-    }
-
-    section .mybutton:hover {
-        background: white;
-        font-size: 14px;
-        margin-top: 29px;
+        font-size: 14px; /* Larger text */
+        padding: 0 3px; /* Further reduce padding */
     }
 }

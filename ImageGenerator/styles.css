@@ -1,44 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .container {
-    padding-top: 100px; 
+    padding-top: 100px;
     text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .header {
     margin-bottom: 20px;
-    font-family: 'Roboto';
 }
 
 .input-container {
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 20px; /* Increased padding for bigger input field */
-    z-index: 1000; /* Ensure it is on top of other elements */
-    text-align: center; /* Centering the content inside the input bar */
+    padding: 20px;
+    z-index: 1000;
+    text-align: center;
+    width: 100%;
 }
-
 .input-container input {
-    width: 70%; /* Width of the input field */
-    padding: 15px; /* Bigger padding for bigger input field */
-    border: 1px solid #ccc; /* Border for the input field */
-    border-radius: 8px; /* Rounded corners */
-    font-size: 18px; /* Larger text */
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    margin-bottom: 10px; /* Add some space between input and button */
+    box-sizing: border-box; /* Ensure padding and border are within width */
 }
 
 .input-container button {
-    padding: 15px 25px; /* Larger button */
-    border: none; /* Remove default border */
-    background-color: #007bff; /* Button color */
-    color: white; /* Text color */
-    border-radius: 8px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 18px; /* Larger text */
+    width: 100%;
+    max-width: 300px; /* Make the button slightly smaller than the input */
+    padding: 15px 25px; /* Larger button padding */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px; /* Add space between the button and the input */
+    box-sizing: border-box;
 }
 
 .input-container button:hover {
-    background-color: #0056b3; /* Darker button color on hover */
+    background-color: #0056b3;
 }
+
 
 .message {
     margin-top: 20px;
@@ -49,31 +60,51 @@
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
-    justify-items: center; /* Center grid items horizontally */
-    align-items: center; /* Center grid items vertically */
-    gap: 20px; /* Add spacing between grid items */
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
     width: 100%;
-    max-width: 800px; /* Limit the width of the grid */
-    margin: 20px auto; /* Center grid horizontally */
-    padding: 20px;
-    background-color: #4b49964d; /* Light gray background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect for grid */
-    border-radius: 15px; /* Rounded corners */
-    min-height: 400px; /* Pre-assign space for 4 images */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #4b49964d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    min-height: 400px;
+    box-sizing: border-box;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr; /* Stack images vertically on smaller screens */
+        padding: 20px;
+    }
+
+    .input-container input,
+    .input-container button {
+        width: 100%; /* Make input field and button fit screen width */
+        max-width: none;
+    }
+
+    .grid img {
+        width: 100%; /* Make sure images are responsive */
+        height: auto;
+    }
 }
 
 .grid div {
-    width: 100%; /* Ensure div takes full space in grid cell */
-    text-align: center; /* Center the content in each grid item */
+    width: 100%;
+    text-align: center;
 }
 
 .grid img {
     width: 100%;
     height: auto;
     object-fit: cover;
-    border-radius: 15px; /* Rounded corners for images */
-    box-shadow: 0 4px 8px rgba(15, 15, 15, 0.2); /* Shadow effect for images */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(15, 15, 15, 0.2);
 }
 
 .note {
@@ -97,4 +128,3 @@
 .download-btn:hover {
     background-color: #218838;
 }
-
